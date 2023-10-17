@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Card</title>
+  <style>
+    /*–––––––––––––– Url for importing fonts ––––––––––––––*/
+    @import url('https://fonts.googleapis.com/css2?family=Mooli&family=Open+Sans&family=Playfair+Display&family=Roboto+Mono&display=swap');
+
+
+    /*––––––––––––––– CSS variable –––––––––––––––*/
+    :root{
+      --shadow: rgb(145, 144, 144);
+      --cardBg: rgb(169, 252, 246);
+      --txtShadow: 2px 2px 5px rgb(145, 144, 144);
+      --subHead: rgb(71, 71, 71);
+    }
+
+    #card-container{
+      height: 100vh; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #card{
+      background-color: var(--cardBg);
+      border-radius: 1rem;
+      width: 400px;
+      padding: 5%;
+      transition: .2s linear;
+      text-align: center;
+    }
+
+    #card:hover{
+      background-color: rgb(0, 255, 94);
+      margin-bottom: 3rem;
+      box-shadow: 5px 5px 20px var(--shadow);
+    }
+
+    /*––––––––––––––– card headings –––––––––––––––*/
+    .heading{
+      font-family: "Mooli";
+      text-shadow: var(--txtShadow);
+    }
+
+    .sub-heading{
+      font-family: "Roboto Mono";
+      text-shadow: var(--txtShadow);
+    }
+
+    /*–––––––––––––––– list styles ––––––––––––––––*/
+    #list_style{
+      list-style: none;
+      padding: 0;
+    }
+
+    /*––––––––––––––––––– styling btn –––––––––––––––––––*/
+    #btn button{
+      background-color: red;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: .5rem;
+      transition: 0.2s linear;
+    }
+
+    #btn button:hover{
+      background-color: white;
+      color: red;
+      cursor: pointer;
+    }
+
+    #btn i{
+      margin-left: 10px;
+    }
+
+  </style>
+
+  <!--–––––––––––––––––– Linking Font Awesome Icons ––––––––––––––––––-->
+  <script src="https://kit.fontawesome.com/0f54217039.js" crossorigin="anonymous"></script>
+</head>
+<!-- <i class="fa-solid fa-user"></i> -->
+<body>
+  <main id="card-container">
+    <div id="card">
+      <h1 class="heading">
+        Interactive Card
+      </h1>
+      <h3 class="sub-heading">FST CARD</h3>
+
+      <ul id="list_style">
+        <li>Web Developer</li>
+        <li>Data Structures and Algoritham</li>
+        <li>Communication</li>
+      </ul>
+
+      <div id="btn">
+        <button>Click Me</button>
+        <i class="fa-solid fa-user"></i>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
